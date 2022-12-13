@@ -5,12 +5,12 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
     public float jumpforce = 50f;
-    Rigidbody rb;
+    Rigidbody2D rb;
     bool canJump;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -24,6 +24,13 @@ public class movement : MonoBehaviour
 
     }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag=="floor")
+        {
+            canJump = false;
+        }
+    }
     void Update()
     {
         if (Input.GetKey(KeyCode.D))
@@ -34,5 +41,11 @@ public class movement : MonoBehaviour
         {
             transform.position += new Vector3(-5, 0) * Time.deltaTime;
         }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            rb.AddForce(0, jumpforce*Time.deltaTime,0);
+        }
     }
+
 }
