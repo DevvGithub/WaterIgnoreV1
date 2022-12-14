@@ -27,7 +27,7 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        string timeString = 02.ToString();
+        string timeString = o2.ToString();
         timeString = timeString.Split(',')[0];
         //så man inte ser 15 decimaler
         o2TM.text = "O2: " + timeString+" / "+O2timer;//vad som ska stå på TM
@@ -36,7 +36,7 @@ public class player : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
+        HpTM.text = "Hp:"+MaxHP+"/"+MaxHPsave;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
