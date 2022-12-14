@@ -26,7 +26,7 @@ public class player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Respawn")
         {
-
+            time = 0;
         }
     }
        
