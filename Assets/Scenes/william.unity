@@ -462,8 +462,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73be35793ca3fa646b92a37405970e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 10
-  TM: {fileID: 1467770501}
+  o2: 20
+  o2TM: {fileID: 1467770501}
+  HpTM: {fileID: 0}
+  MaxHP: 0
 --- !u!114 &902753450
 MonoBehaviour:
   m_ObjectHideFlags: 0
