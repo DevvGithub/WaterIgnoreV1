@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3692342455814496755}
   - component: {fileID: 3692342455814496754}
   - component: {fileID: 1100585370231966347}
+  - component: {fileID: 2804178128020447017}
   m_Layer: 0
   m_Name: Manet
-  m_TagString: Untagged
+  m_TagString: jellyfish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,3 +98,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd2893ae2eac194fb4b3a90002ed6a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &2804178128020447017
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3692342455814496765}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
