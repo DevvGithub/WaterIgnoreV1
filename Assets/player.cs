@@ -37,6 +37,10 @@ public class player : MonoBehaviour
         {
             time = O2timer;
         }
+        if (collision.gameObject.tag == "jellyfish")
+        {
+            Destroy(this.gameObject);
+        }
         //cod av William
     }
        
