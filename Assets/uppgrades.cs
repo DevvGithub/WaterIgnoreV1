@@ -17,10 +17,11 @@ public class uppgrades : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")// Om en uppgrade som O2 nuddar "Player" så försvinner den.
         {
             Destroy(this.gameObject);
         }
     }
+    //cod av William
 
 }

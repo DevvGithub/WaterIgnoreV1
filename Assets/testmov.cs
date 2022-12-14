@@ -15,4 +15,5 @@ public class testmov : MonoBehaviour
     {
         transform.position += new Vector3(0, 1, 0) * Time.deltaTime;
     }
+    //cod av William
 }
