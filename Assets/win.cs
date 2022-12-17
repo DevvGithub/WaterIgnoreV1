@@ -11,7 +11,7 @@ public class win : MonoBehaviour
     {
         if (collision.gameObject.tag=="Player")
         {
-            print("kaka");
+            
             GM.text = "You Win";
         }
     }
