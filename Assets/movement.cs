@@ -24,6 +24,7 @@ public class movement : MonoBehaviour
         {
             canJump = true;
             canMove = true;
+            //man kan bara hoppa och gå när man nuddat marken
         }
        
         
@@ -36,6 +37,7 @@ public class movement : MonoBehaviour
         if (collision.gameObject.tag=="floor")
         {
             canJump = false;
+            //när man lämnar marken kan man inte hoppa
         }
     }
     void Update()
@@ -62,7 +64,9 @@ public class movement : MonoBehaviour
         if (canMove == false)
         {
             transform.position += new Vector3(0, -3)*Time.deltaTime;
+            //så att man inte kan gå i början när man sjunker från båten
         }
+        //Kod av Albin
     }
 
 }
