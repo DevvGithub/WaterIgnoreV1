@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-    private float jumpforce=7;
-    private float velocity;
-    private float gravity = -2;
+    Rigidbody2D rb;
+    float jumpforce = 10;
     bool canJump;
     bool canMove;
     
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
@@ -54,16 +53,17 @@ public class movement : MonoBehaviour
             {
                 transform.position += new Vector3(-5, 0) * Time.deltaTime;
             }
-        }
-        if (canJump==true)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (canJump==true)
             {
-                velocity = jumpforce;
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
+                }
             }
         }
-        velocity += gravity * Time.deltaTime;
-        transform.Translate(new Vector3(0, velocity, 0) * Time.deltaTime);
+
+        
+        
         if (canMove == false)
         {
             transform.position += new Vector3(0, -3)*Time.deltaTime;
