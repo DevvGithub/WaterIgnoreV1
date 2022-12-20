@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class player : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class player : MonoBehaviour
       MaxHPsave = MaxHP;
     }
 
+    
     // Update is called once per frame
     void Update()
     {
@@ -34,14 +36,20 @@ public class player : MonoBehaviour
         o2 -= Time.deltaTime;// så att luften går ned över tid.
         if (o2 <= 0)
         {
-            Destroy(this.gameObject);
+            dö();
         }
+
         HpTM.text = "Hp:"+MaxHP+"/"+MaxHPsave;
 
         if (MaxHP <= 0)
         {
-            Destroy(this.gameObject);
+            dö();
         }
+    }
+    private void dö()
+    {
+        Destroy(this.gameObject);
+        SceneManager.LoadScene("game");
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
