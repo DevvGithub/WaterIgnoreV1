@@ -15,6 +15,10 @@ public class player : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI HpTM;
     [SerializeField]
+    TextMeshProUGUI Death;
+    [SerializeField]
+    TextMeshProUGUI Respawn;
+    [SerializeField]
     int MaxHP;
     int MaxHPsave;
 
@@ -45,11 +49,13 @@ public class player : MonoBehaviour
         {
             dö();
         }
+        
     }
     private void dö()
     {
         Destroy(this.gameObject);
-        SceneManager.LoadScene("game");
+        Death.text = "YOU DIED";
+        Respawn.text = "Press R to restart";
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
