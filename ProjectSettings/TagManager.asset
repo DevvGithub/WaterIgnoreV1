@@ -8,6 +8,7 @@ TagManager:
   - spawn
   - enemy
   - jellyfish
+  - krabba
   layers:
   - Default
   - TransparentFX
