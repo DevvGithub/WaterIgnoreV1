@@ -72,7 +72,11 @@ public class player : MonoBehaviour
         {
             MaxHP -= 2;
         }
-        //cod av William
+        if (collision.gameObject.tag == "HPthing")
+        {
+            MaxHP = MaxHPsave;
+        }
+        //cod av William och Albin
     }
        
 }
