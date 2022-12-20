@@ -31,7 +31,7 @@ public class jelly : MonoBehaviour
         {
             transform.position += new Vector3(0, 2, 0);
             time = 0;
-     }
+        }
 
     }
 }
