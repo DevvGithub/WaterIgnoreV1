@@ -5,14 +5,15 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
     private float jumpforce=7;
-    Rigidbody2D rb;
+    private float velocity;
+    private float gravity = -2;
     bool canJump;
     bool canMove;
     
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+       
     }
 
     // Update is called once per frame
@@ -58,9 +59,11 @@ public class movement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
+                velocity = jumpforce;
             }
         }
+        velocity += gravity * Time.deltaTime;
+        transform.Translate(new Vector3(0, velocity, 0) * Time.deltaTime);
         if (canMove == false)
         {
             transform.position += new Vector3(0, -3)*Time.deltaTime;
