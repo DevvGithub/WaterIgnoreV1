@@ -8,9 +8,10 @@ public class FISH : MonoBehaviour
     Transform player;
     [SerializeField]
     Transform fish;
+    [SerializeField]
+    float speed;
 
-
-
+    Vector3 dir;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,8 @@ public class FISH : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(player.transform.position.x - fish.transform.position.x, player.transform.position.y - fish.transform.position.y, 0)*Time.deltaTime;
+        dir = (player.transform.position - fish.transform.position).normalized;
+        transform.position += dir * speed *Time.deltaTime;
     }
 }
 
