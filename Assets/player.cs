@@ -37,6 +37,11 @@ public class player : MonoBehaviour
             Destroy(this.gameObject);
         }
         HpTM.text = "Hp:"+MaxHP+"/"+MaxHPsave;
+
+        if (MaxHP <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -46,7 +51,8 @@ public class player : MonoBehaviour
         }
         if (collision.gameObject.tag == "jellyfish")
         {
-            Destroy(this.gameObject);
+            MaxHP -=1;
+           
         }
         //cod av William
     }
