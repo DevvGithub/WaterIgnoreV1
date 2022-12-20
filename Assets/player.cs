@@ -62,7 +62,7 @@ public class player : MonoBehaviour
             MaxHP -=1;
            
         }
-        if (collision.gameObject.tag == "krabba");
+        if (collision.gameObject.tag == "krabba")
         {
             MaxHP -= 2;
         }
