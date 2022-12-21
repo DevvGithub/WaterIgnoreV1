@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class jelly : MonoBehaviour
+public class HerrKrabba : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -11,30 +11,34 @@ public class jelly : MonoBehaviour
             hitpoints += -1;
         }
     }
-    private int hitpoints = 2; 
+    private int hitpoints = 1;
     private float time = 0;
+   
+    
+    // Start is called before the first frame update
     void Start()
     {
         
     }
+
     // Update is called once per frame
     void Update()
     {
-        if(hitpoints <= 0)
+        if (hitpoints <= 0)
         {
             Destroy(this.gameObject);
         }
-        
+
         time += Time.deltaTime;
-        if (time <= 2)
+        if (time <= 3)
         {
-            transform.position += new Vector3(0, -1, 0) * Time.deltaTime;
+            transform.position += new Vector3(-2, 0, 0) * Time.deltaTime;
         }
-        if(time >= 2)
+        if (time >= 3)
         {
-            transform.position += new Vector3(0, 4, 0) * Time.deltaTime;
+            transform.position += new Vector3(2, 0, 0) * Time.deltaTime;
         }
-        if(time >= 2.5)
+        if (time >= 6)
         {
             time = 0;
         }
