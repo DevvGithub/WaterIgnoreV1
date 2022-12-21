@@ -9,6 +9,8 @@ TagManager:
   - enemy
   - jellyfish
   - krabba
+  - HP blub
+  - HPthing
   layers:
   - Default
   - TransparentFX
