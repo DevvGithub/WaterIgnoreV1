@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class win : MonoBehaviour
 {
@@ -25,9 +24,6 @@ public class win : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.R))
-        {
-            SceneManager.LoadScene("Game");
-        }
+        
     }
 }

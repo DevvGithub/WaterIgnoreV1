@@ -13,6 +13,7 @@ public class jelly : MonoBehaviour
     }
     private int hitpoints = 2; 
     private float time = 0;
+    private float timer = 2;
     void Start()
     {
         
