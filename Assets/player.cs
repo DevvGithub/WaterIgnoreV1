@@ -15,10 +15,6 @@ public class player : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI HpTM;
     [SerializeField]
-    TextMeshProUGUI Death;
-    [SerializeField]
-    TextMeshProUGUI Respawn;
-    [SerializeField]
     int MaxHP;
     int MaxHPsave;
 
@@ -49,13 +45,11 @@ public class player : MonoBehaviour
         {
             dö();
         }
-        
     }
     private void dö()
     {
         Destroy(this.gameObject);
-        Death.text = "YOU DIED";
-        Respawn.text = "Press R to restart";
+        SceneManager.LoadScene("game");
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -68,15 +62,7 @@ public class player : MonoBehaviour
             MaxHP -=1;
            
         }
-        if (collision.gameObject.tag == "krabba")
-        {
-            MaxHP -= 2;
-        }
-        if (collision.gameObject.tag == "HPthing")
-        {
-            MaxHP = MaxHPsave;
-        }
-        //cod av William och Albin
+        //cod av William
     }
        
 }
